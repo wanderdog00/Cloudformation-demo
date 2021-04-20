@@ -1,7 +1,4 @@
 Parameters:
-  VPC:
-    Type: String
-    Default: vpc-14091c72
   Subnet:
     Type: String
     Default: subnet-9388dedb
@@ -17,7 +14,38 @@ Parameters:
 Resources:
   AnsibleEC2:
     Type: "AWS::S3::EC2"
+    Properties:
+      ImageId: ami-00552336fb4b81164 
+      KeyName: !Ref KeyName
+      InstanceType: !Ref InstanceType
+      SubnetId: !Ref Subnet
+      SecurityGroupIds:
+        - !Ref SecurityGroup
+      Tags:
+        - Key: Name
+          Value: AnsibleEC2
+
   Target1:
     Type: "AWS::S3::EC2"
+    Properties:
+      ImageId: ami-00552336fb4b81164 
+      KeyName: !Ref KeyName
+      InstanceType: !Ref InstanceType
+      SubnetId: !Ref Subnet
+      SecurityGroupIds:
+        - !Ref SecurityGroup
+      Tags:
+        - Key: Name
+          Value: Target1
   Target2:
     Type: "AWS::S3::EC2"
+    Properties:
+      ImageId: ami-00552336fb4b81164 
+      KeyName: !Ref KeyName
+      InstanceType: !Ref InstanceType
+      SubnetId: !Ref Subnet
+      SecurityGroupIds:
+        - !Ref SecurityGroup
+      Tags:
+        - Key: Name
+          Value: Target2
