@@ -52,15 +52,3 @@ Resources:
       Tags:
         - Key: Name
           Value: Target2
-  Target3:
-    Type: AWS::EC2::Instance
-    Properties:
-      ImageId: !Ref ImageID 
-      KeyName: !Ref KeyName
-      InstanceType: !Ref InstanceType
-      SubnetId: !Ref Subnet
-      SecurityGroupIds:
-        - !Ref SecurityGroup
-      Tags:
-        - Key: Name
-          Value: Target3
