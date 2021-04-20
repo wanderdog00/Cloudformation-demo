@@ -13,7 +13,7 @@ Parameters:
     Default: sg-029e6de661f5712bb
 Resources:
   AnsibleEC2:
-    Type: "AWS::S3::EC2"
+    Type: AWS::EC2::Instance
     Properties:
       ImageId: ami-00552336fb4b81164 
       KeyName: !Ref KeyName
@@ -26,7 +26,7 @@ Resources:
           Value: AnsibleEC2
 
   Target1:
-    Type: "AWS::S3::EC2"
+    Type: AWS::EC2::Instance
     Properties:
       ImageId: ami-00552336fb4b81164 
       KeyName: !Ref KeyName
@@ -38,7 +38,7 @@ Resources:
         - Key: Name
           Value: Target1
   Target2:
-    Type: "AWS::S3::EC2"
+    Type: AWS::EC2::Instance
     Properties:
       ImageId: ami-00552336fb4b81164 
       KeyName: !Ref KeyName
