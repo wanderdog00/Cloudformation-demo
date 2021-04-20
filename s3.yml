@@ -1,7 +1,7 @@
 Resources:
   S3Bucket:
     Type: "AWS::S3::Bucket"
-Output:
+Outputs:
   BucketName:
     Value: !Ref S3Bucket
     Desctiption: "Name of my bucket C" 
