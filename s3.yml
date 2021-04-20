@@ -1,7 +1,12 @@
 Resources:
   S3Bucket:
     Type: "AWS::S3::Bucket"
+  S3Bucket2:
+    Type: "AWS::S3::Bucket"
 Outputs:
-  BucketName:
-    Value: !Ref S3Bucket
-    Description: "Name of my bucket C" 
+  BucketName1:
+    Value: !Ref S3Bucket1
+    Description: "Name of my first bucket" 
+  BucketName2:
+    Value: !Ref S3Bucket2
+    Description: "Name of my second bucket" 
