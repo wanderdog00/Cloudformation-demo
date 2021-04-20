@@ -1,0 +1,23 @@
+Parameters:
+  VPC:
+    Type: String
+    Default: vpc-14091c72
+  Subnet:
+    Type: String
+    Default: subnet-9388dedb
+  InstanceType:
+    Type: String
+    Default: t2.small
+  KeyName:
+    Type: String
+    Default: _20210420_personal
+  SecurityGroup:
+    Type: String
+    Default: sg-029e6de661f5712bb
+Resources:
+  AnsibleEC2:
+    Type: "AWS::S3::EC2"
+  Target1:
+    Type: "AWS::S3::EC2"
+  Target2:
+    Type: "AWS::S3::EC2"
