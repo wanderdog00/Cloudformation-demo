@@ -4,4 +4,4 @@ Resources:
 Outputs:
   BucketName:
     Value: !Ref S3Bucket
-    Desctiption: "Name of my bucket C" 
+    Description: "Name of my bucket C" 
