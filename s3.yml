@@ -1,5 +1,5 @@
 Resources:
-  S3Bucket:
+  S3Bucket1:
     Type: "AWS::S3::Bucket"
   S3Bucket2:
     Type: "AWS::S3::Bucket"
