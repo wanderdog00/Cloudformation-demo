@@ -11,11 +11,14 @@ Parameters:
   SecurityGroup:
     Type: String
     Default: sg-029e6de661f5712bb
+  ImageID: 
+    Type: String
+    Default: ami-0ffea00000f287d30
 Resources:
   AnsibleEC2:
     Type: AWS::EC2::Instance
     Properties:
-      ImageId: ami-00552336fb4b81164 
+      ImageId: !Ref ImageID
       KeyName: !Ref KeyName
       InstanceType: !Ref InstanceType
       SubnetId: !Ref Subnet
@@ -28,7 +31,7 @@ Resources:
   Target1:
     Type: AWS::EC2::Instance
     Properties:
-      ImageId: ami-00552336fb4b81164 
+      ImageId: !Ref ImageID
       KeyName: !Ref KeyName
       InstanceType: !Ref InstanceType
       SubnetId: !Ref Subnet
@@ -40,7 +43,7 @@ Resources:
   Target2:
     Type: AWS::EC2::Instance
     Properties:
-      ImageId: ami-00552336fb4b81164 
+      ImageId: !Ref ImageID
       KeyName: !Ref KeyName
       InstanceType: !Ref InstanceType
       SubnetId: !Ref Subnet
@@ -52,7 +55,7 @@ Resources:
   Target3:
     Type: AWS::EC2::Instance
     Properties:
-      ImageId: ami-00552336fb4b81164 
+      ImageId: !Ref ImageID 
       KeyName: !Ref KeyName
       InstanceType: !Ref InstanceType
       SubnetId: !Ref Subnet
