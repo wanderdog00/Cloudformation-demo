@@ -14,6 +14,9 @@ Parameters:
   ImageID: 
     Type: String
     Default: ami-0ffea00000f287d30
+  TargetKeyName:
+    Type: String
+    Default: _20210422_pem
 Resources:
   AnsibleEC2:
     Type: AWS::EC2::Instance
@@ -32,7 +35,7 @@ Resources:
     Type: AWS::EC2::Instance
     Properties:
       ImageId: !Ref ImageID
-      KeyName: !Ref KeyName
+      KeyName: !Ref TargetKeyName
       InstanceType: !Ref InstanceType
       SubnetId: !Ref Subnet
       SecurityGroupIds:
@@ -44,7 +47,7 @@ Resources:
     Type: AWS::EC2::Instance
     Properties:
       ImageId: !Ref ImageID
-      KeyName: !Ref KeyName
+      KeyName: !Ref TargetKeyName
       InstanceType: !Ref InstanceType
       SubnetId: !Ref Subnet
       SecurityGroupIds:
