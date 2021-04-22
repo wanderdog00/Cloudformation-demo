@@ -1,0 +1,30 @@
+---
+- name: install things to AD join
+  hosts: all
+
+  tasks:
+  - name: ensure sssd is installed and latest
+    yum:
+      name: sssd
+      state: latest
+    become: yes
+  - name: ensure realmd is installed and latest
+    yum:
+      name: realmd
+      state: latest
+    become: yes
+  - name: ensure krb5-workstation is installed and latest
+    yum:
+      name: krb5-workstation
+      state: latest
+    become: yes
+  - name: ensure samba-common-tools is installed and latest
+    yum:
+      name: samba-common-tools
+      state: latest
+    become: yes
+  - name: ensure cifs-utils  is installed and latest
+    yum:
+      name: cifs-utils 
+      state: latest
+    become: yes
